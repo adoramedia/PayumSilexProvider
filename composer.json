@@ -1,5 +1,5 @@
 {
-  "name": "payum/payum-silex-provider",
+  "name": "adoramedia/payum-silex-provider",
   "type": "library",
   "description": "Payum offers everything you need to work with payments. From simplest use cases to very advanced ones.",
   "keywords": ["payment", "silex"],
@@ -17,12 +17,15 @@
     {
       "name":     "Community contributions",
       "homepage": "https://github.com/Payum/PayumSilexProvider/contributors"
+    },
+    {
+	"name": "David Moya de la Ossa",
+	"email": "david@adoramedia.com"
     }
   ],
   "require": {
     "php": ">=5.5.2",
     "silex/silex": "^1.2",
-    "symfony/form": "^3",
     "payum/core": "^1.2"
   },
   "suggest": {
