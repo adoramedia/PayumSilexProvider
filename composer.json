@@ -19,8 +19,8 @@
       "homepage": "https://github.com/Payum/PayumSilexProvider/contributors"
     },
     {
-	"name": "David Moya de la Ossa",
-	"email": "david@adoramedia.com"
+      "name": "David Moya de la Ossa",
+      "email": "david@adoramedia.com"
     }
   ],
   "require": {

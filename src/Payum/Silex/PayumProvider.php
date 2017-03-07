@@ -72,6 +72,7 @@ class PayumProvider implements ServiceProviderInterface, ControllerProviderInter
             return new ReplyToSymfonyResponseConverter();
         });
 
+        /** cambio ** los types dan error al no tener definido el método getName(), seguramente debido al cambio de versión de silex requerida **
         $app['form.types'] = $app->share($app->extend('form.types', function ($types) use ($app) {
             $types[] = new CreditCardType();
             $types[] = new CreditCardExpirationDateType();
@@ -81,6 +82,7 @@ class PayumProvider implements ServiceProviderInterface, ControllerProviderInter
 
             return $types;
         }));
+        /***/
 
         $app['payum.gateway_factory_choices_callback'] = $app->share(function ($app) {
             return function(Options $options) use ($app) {
