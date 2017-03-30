@@ -14,6 +14,12 @@ class NotifyController extends PayumController
      */
     public function doAction(Request $request)
     {
+        \Adora\Wordpress\Application::getInstance()['logger']->notice(__METHOD__, array(
+            'uri' => $request->getUri(),
+            'method' => $request->getMethod(),
+            'data' => $request->isMethod('POST') ? $request->request->all() : $request->query->all()
+        ));
+
         $token = $this->payum->getHttpRequestVerifier()->verify($request);
 
         $gateway = $this->payum->getGateway($token->getGatewayName());
